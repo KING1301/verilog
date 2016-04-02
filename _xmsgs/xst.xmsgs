@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">171</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">STATE</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">172</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">A_TIME1</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">173</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">A_TIME2</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">174</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">TIME1</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">175</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">TIME2</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">176</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">TIME3</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">177</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">TIME4</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">340</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">count</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="863" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">360</arg>: Name conflict (<arg fmt="%s" index="3">&lt;sp&gt; and &lt;SP&gt;, renaming sp as sp_rnm0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">372</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">MODE</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">374</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">SET</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">492</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">count_C</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="warning" file="Xst" num="1467" delta="new" >&quot;<arg fmt="%s" index="1">WASHER.v</arg>&quot; line <arg fmt="%d" index="2">493</arg>: Reset or set value is not constant in &lt;<arg fmt="%s" index="3">CLOSE</arg>&gt;. It could involve simulation mismatches
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

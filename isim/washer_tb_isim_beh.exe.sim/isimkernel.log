@@ -1,0 +1,28 @@
+Command line:
+   washer_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  64235
+
+Sun Aug 30 23:23:45 2015
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 361.255 Meg
+
+ Total Signals          : 114
+ Total Nets             : 86
+ Total Signal Drivers   : 44
+ Total Blocks           : 12
+ Total Primitive Blocks : 9
+ Total Processes        : 60
+ Total Traceable Variables  : 53
+ Total Scalar Nets and Variables : 317
+
+ Total Simulation Time: 577.375 sec
+
+ Current Memory Usage: 361.255 Meg
+
+Sun Aug 30 23:34:46 2015
+

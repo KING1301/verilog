@@ -1,0 +1,839 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: WASHER.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "WASHER.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "WASHER"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-cp132
+
+---- Source Options
+Top Module Name                    : WASHER
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "WASHER.v" in library work
+Module <Divider> compiled
+Module <Decoding> compiled
+Module <dtsm> compiled
+Module <CONTROL> compiled
+Module <COUNT> compiled
+Module <LED> compiled
+Module <M_WCHOOSE> compiled
+Module <AUTO_CLOSE> compiled
+Module <WASHER> compiled
+No errors in compilation
+Analysis of file <"WASHER.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <WASHER> in library <work>.
+
+Analyzing hierarchy for module <Divider> in library <work>.
+
+Analyzing hierarchy for module <dtsm> in library <work>.
+
+Analyzing hierarchy for module <CONTROL> in library <work>.
+
+Analyzing hierarchy for module <COUNT> in library <work>.
+
+Analyzing hierarchy for module <LED> in library <work>.
+
+Analyzing hierarchy for module <M_WCHOOSE> in library <work>.
+
+Analyzing hierarchy for module <AUTO_CLOSE> in library <work>.
+
+Analyzing hierarchy for module <Decoding> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <WASHER>.
+Module <WASHER> is correct for synthesis.
+ 
+Analyzing module <Divider> in library <work>.
+Module <Divider> is correct for synthesis.
+ 
+Analyzing module <dtsm> in library <work>.
+Module <dtsm> is correct for synthesis.
+ 
+Analyzing module <Decoding> in library <work>.
+Module <Decoding> is correct for synthesis.
+ 
+Analyzing module <CONTROL> in library <work>.
+Module <CONTROL> is correct for synthesis.
+ 
+Analyzing module <COUNT> in library <work>.
+WARNING:Xst:1467 - "WASHER.v" line 171: Reset or set value is not constant in <STATE>. It could involve simulation mismatches
+WARNING:Xst:1467 - "WASHER.v" line 172: Reset or set value is not constant in <A_TIME1>. It could involve simulation mismatches
+WARNING:Xst:1467 - "WASHER.v" line 173: Reset or set value is not constant in <A_TIME2>. It could involve simulation mismatches
+WARNING:Xst:1467 - "WASHER.v" line 174: Reset or set value is not constant in <TIME1>. It could involve simulation mismatches
+WARNING:Xst:1467 - "WASHER.v" line 175: Reset or set value is not constant in <TIME2>. It could involve simulation mismatches
+WARNING:Xst:1467 - "WASHER.v" line 176: Reset or set value is not constant in <TIME3>. It could involve simulation mismatches
+WARNING:Xst:1467 - "WASHER.v" line 177: Reset or set value is not constant in <TIME4>. It could involve simulation mismatches
+Module <COUNT> is correct for synthesis.
+ 
+Analyzing module <LED> in library <work>.
+WARNING:Xst:1467 - "WASHER.v" line 340: Reset or set value is not constant in <count>. It could involve simulation mismatches
+Module <LED> is correct for synthesis.
+ 
+Analyzing module <M_WCHOOSE> in library <work>.
+WARNING:Xst:863 - "WASHER.v" line 360: Name conflict (<sp> and <SP>, renaming sp as sp_rnm0).
+WARNING:Xst:1467 - "WASHER.v" line 372: Reset or set value is not constant in <MODE>. It could involve simulation mismatches
+WARNING:Xst:1467 - "WASHER.v" line 374: Reset or set value is not constant in <SET>. It could involve simulation mismatches
+Module <M_WCHOOSE> is correct for synthesis.
+ 
+Analyzing module <AUTO_CLOSE> in library <work>.
+WARNING:Xst:1467 - "WASHER.v" line 492: Reset or set value is not constant in <count_C>. It could involve simulation mismatches
+WARNING:Xst:1467 - "WASHER.v" line 493: Reset or set value is not constant in <CLOSE>. It could involve simulation mismatches
+Module <AUTO_CLOSE> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Divider>.
+    Related source file is "WASHER.v".
+    Found 1-bit register for signal <CLK_250>.
+    Found 1-bit register for signal <CLK_1>.
+    Found 26-bit up counter for signal <cn>.
+    Found 19-bit up counter for signal <cn1>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <Divider> synthesized.
+
+
+Synthesizing Unit <CONTROL>.
+    Related source file is "WASHER.v".
+    Found 1-bit register for signal <SP>.
+    Found 1-bit register for signal <ST>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <CONTROL> synthesized.
+
+
+Synthesizing Unit <COUNT>.
+    Related source file is "WASHER.v".
+    Found 2-bit register for signal <STATE>.
+    Found 4-bit down counter for signal <TIME1>.
+    Found 4-bit register for signal <TIME2>.
+    Found 4-bit down counter for signal <A_TIME1>.
+    Found 4-bit down counter for signal <A_TIME2>.
+    Found 4-bit comparator greater for signal <LED_in$cmp_gt0000> created at line 160.
+    Found 4-bit subtractor for signal <TIME2$addsub0000> created at line 300.
+    Found 4-bit register for signal <TIME3>.
+    Found 4-bit adder for signal <TIME3$addsub0000> created at line 294.
+    Found 4-bit register for signal <TIME4>.
+    Found 4-bit adder for signal <TIME4$addsub0000> created at line 289.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <COUNT> synthesized.
+
+
+Synthesizing Unit <LED>.
+    Related source file is "WASHER.v".
+    Found 2-bit up counter for signal <count>.
+    Found 1-bit register for signal <flag>.
+    Found 2-bit comparator greater for signal <LED_1$cmp_gt0000> created at line 328.
+    Found 2-bit comparator greater for signal <LED_2$cmp_gt0000> created at line 329.
+    Found 2-bit comparator greater for signal <LED_3$cmp_gt0000> created at line 330.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <LED> synthesized.
+
+
+Synthesizing Unit <M_WCHOOSE>.
+    Related source file is "WASHER.v".
+    Found 8x8-bit ROM for signal <COUNT_W$rom0000>.
+    Found 3-bit up counter for signal <MODE>.
+    Found 1-bit register for signal <display>.
+    Found 1-bit register for signal <SET>.
+    Found 3-bit register for signal <COUNT_D>.
+    Found 3-bit adder for signal <COUNT_D$addsub0000> created at line 463.
+    Found 3-bit up counter for signal <COUNT_W>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <M_WCHOOSE> synthesized.
+
+
+Synthesizing Unit <AUTO_CLOSE>.
+    Related source file is "WASHER.v".
+    Found 1-bit register for signal <CLOSE>.
+    Found 4-bit up counter for signal <count_C>.
+    Found 1-bit register for signal <flag_c>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <AUTO_CLOSE> synthesized.
+
+
+Synthesizing Unit <Decoding>.
+    Related source file is "WASHER.v".
+    Found 16x8-bit ROM for signal <q_out>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <Decoding> synthesized.
+
+
+Synthesizing Unit <dtsm>.
+    Related source file is "WASHER.v".
+    Found 4-bit register for signal <q_ctl>.
+    Found 4-bit register for signal <q_count>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <dtsm> synthesized.
+
+
+Synthesizing Unit <WASHER>.
+    Related source file is "WASHER.v".
+Unit <WASHER> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 1
+ 8x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 1
+# Counters                                             : 9
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 2
+ 4-bit down counter                                    : 3
+ 4-bit up counter                                      : 1
+# Registers                                            : 17
+ 1-bit register                                        : 11
+ 3-bit register                                        : 1
+ 4-bit register                                        : 5
+# Comparators                                          : 4
+ 2-bit comparator greater                              : 3
+ 4-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 1
+ 8x8-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 1
+# Counters                                             : 9
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 2
+ 4-bit down counter                                    : 3
+ 4-bit up counter                                      : 1
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+# Comparators                                          : 4
+ 2-bit comparator greater                              : 3
+ 4-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <WASHER> ...
+
+Optimizing unit <Divider> ...
+
+Optimizing unit <LED> ...
+
+Optimizing unit <M_WCHOOSE> ...
+
+Optimizing unit <AUTO_CLOSE> ...
+
+Optimizing unit <dtsm> ...
+
+Optimizing unit <COUNT> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block WASHER, actual ratio is 14.
+FlipFlop s3/ST has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 104
+ Flip-Flops                                            : 104
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : WASHER.ngr
+Top Level Output File Name         : WASHER
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 332
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 43
+#      LUT2                        : 15
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 39
+#      LUT4                        : 108
+#      LUT4_D                      : 3
+#      LUT4_L                      : 3
+#      MUXCY                       : 55
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 45
+# FlipFlops/Latches                : 104
+#      FDC                         : 8
+#      FDCE                        : 19
+#      FDCPE                       : 21
+#      FDE                         : 2
+#      FDP                         : 1
+#      FDR                         : 45
+#      FDS                         : 8
+# Clock Buffers                    : 5
+#      BUFG                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 4
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-4 
+
+ Number of Slices:                      120  out of    960    12%  
+ Number of Slice Flip Flops:            103  out of   1920     5%  
+ Number of 4 input LUTs:                221  out of   1920    11%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of     83    30%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         5  out of     24    20%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+STOP                               | IBUF+BUFG              | 3     |
+CLK                                | BUFGP                  | 47    |
+s1/CLK_11                          | BUFG                   | 39    |
+SET_W                              | IBUF+BUFG              | 3     |
+SET_M                              | IBUF+BUFG              | 4     |
+s1/CLK_250                         | NONE(s2/q_count_3)     | 8     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------+------------------------+-------+
+Control Signal                                 | Buffer(FF name)        | Load  |
+-----------------------------------------------+------------------------+-------+
+s4/A_TIME1_2__or0000(s4/A_TIME1_2__or00001:O)  | NONE(s4/A_TIME1_2)     | 15    |
+s3/ST_or0000(s3/ST_or00001:O)                  | NONE(s3/SP)            | 10    |
+N0(XST_GND:G)                                  | NONE(s4/A_TIME1_2)     | 7     |
+s7/CLR(s7/CLR_f5:O)                            | NONE(s7/CLOSE)         | 6     |
+s4/A_TIME2_1__or0000(s4/STATE_0_or00001:O)     | NONE(s4/A_TIME2_1)     | 4     |
+SR(s3/SR1:O)                                   | NONE(s5/count_0)       | 3     |
+s6/COUNT_D_or0001(s6/COUNT_D_or00011:O)        | NONE(s6/COUNT_D_0)     | 3     |
+finish(s4/finish1:O)                           | NONE(s5/flag)          | 2     |
+s4/A_TIME2_1__and0000(s4/A_TIME2_1__and00001:O)| NONE(s4/A_TIME2_1)     | 2     |
+s4/STATE_0_and0000(s4/STATE_0_and00001:O)      | NONE(s4/STATE_0)       | 2     |
+s4/STATE_1_or0000(s4/STATE_1_or00001:O)        | NONE(s4/STATE_1)       | 2     |
+SET_W                                          | IBUF                   | 1     |
+s3/SP_not0001(s6/sp_rnm01_INV_0:O)             | NONE(s6/SET)           | 1     |
+s4/A_TIME1_0__and0000(s4/A_TIME1_0__and00001:O)| NONE(s4/A_TIME1_0)     | 1     |
+s4/A_TIME1_0__or0000(s4/A_TIME1_0__or00001:O)  | NONE(s4/A_TIME1_0)     | 1     |
+s4/A_TIME1_1__and0000(s4/A_TIME1_1__and0000:O) | NONE(s4/A_TIME1_1)     | 1     |
+s4/A_TIME1_1__or0000(s4/A_TIME1_1__or0000:O)   | NONE(s4/A_TIME1_1)     | 1     |
+s4/A_TIME2_0__and0000(s4/A_TIME2_0__and00001:O)| NONE(s4/A_TIME2_0)     | 1     |
+s4/A_TIME2_0__or0000(s4/A_TIME2_0__or00001:O)  | NONE(s4/A_TIME2_0)     | 1     |
+s4/A_TIME2_2__and0000(s4/A_TIME2_2__and00001:O)| NONE(s4/A_TIME2_2)     | 1     |
+s4/A_TIME2_2__or0000(s4/A_TIME2_2__or00001:O)  | NONE(s4/A_TIME2_2)     | 1     |
+s4/STATE_1_and0000(s4/STATE_1_and00001:O)      | NONE(s4/STATE_1)       | 1     |
+s4/TIME1_0__and0000(s4/TIME1_0__and00001:O)    | NONE(s4/TIME1_0)       | 1     |
+s4/TIME2_2__and0000(s4/TIME2_2__and00001:O)    | NONE(s4/TIME2_2)       | 1     |
+s4/TIME2_2__or0000(s4/TIME2_2__or00001:O)      | NONE(s4/TIME2_2)       | 1     |
+-----------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.053ns (Maximum Frequency: 165.207MHz)
+   Minimum input arrival time before clock: 3.954ns
+   Maximum output required time after clock: 8.655ns
+   Maximum combinational path delay: 9.186ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'STOP'
+  Clock period: 3.312ns (frequency: 301.913MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               3.312ns (Levels of Logic = 1)
+  Source:            s3/SP (FF)
+  Destination:       s3/SP (FF)
+  Source Clock:      STOP rising
+  Destination Clock: STOP rising
+
+  Data Path: s3/SP to s3/SP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             32   0.591   1.262  s3/SP (s3/SP)
+     INV:I->O              2   0.704   0.447  s6/sp_rnm01_INV_0 (s3/SP_not0001)
+     FDP:D                     0.308          s3/SP
+    ----------------------------------------
+    Total                      3.312ns (1.603ns logic, 1.709ns route)
+                                       (48.4% logic, 51.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.179ns (frequency: 193.101MHz)
+  Total number of paths / destination ports: 1625 / 94
+-------------------------------------------------------------------------
+Delay:               5.179ns (Levels of Logic = 8)
+  Source:            s1/cn_9 (FF)
+  Destination:       s1/cn_25 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: s1/cn_9 to s1/cn_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  s1/cn_9 (s1/cn_9)
+     LUT2:I0->O            1   0.704   0.000  s1/cn_cmp_eq0000_wg_lut<0> (s1/cn_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  s1/cn_cmp_eq0000_wg_cy<0> (s1/cn_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  s1/cn_cmp_eq0000_wg_cy<1> (s1/cn_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  s1/cn_cmp_eq0000_wg_cy<2> (s1/cn_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  s1/cn_cmp_eq0000_wg_cy<3> (s1/cn_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  s1/cn_cmp_eq0000_wg_cy<4> (s1/cn_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  s1/cn_cmp_eq0000_wg_cy<5> (s1/cn_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O          27   0.331   1.261  s1/cn_cmp_eq0000_wg_cy<6> (s1/cn_cmp_eq0000)
+     FDR:R                     0.911          s1/cn_0
+    ----------------------------------------
+    Total                      5.179ns (3.296ns logic, 1.883ns route)
+                                       (63.6% logic, 36.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 's1/CLK_11'
+  Clock period: 6.053ns (frequency: 165.207MHz)
+  Total number of paths / destination ports: 693 / 67
+-------------------------------------------------------------------------
+Delay:               6.053ns (Levels of Logic = 3)
+  Source:            s4/TIME1_3 (FF)
+  Destination:       s4/TIME3_3 (FF)
+  Source Clock:      s1/CLK_11 rising
+  Destination Clock: s1/CLK_11 rising
+
+  Data Path: s4/TIME1_3 to s4/TIME3_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q            6   0.591   0.844  s4/TIME1_3 (s4/TIME1_3)
+     LUT4_D:I0->O         19   0.704   1.260  s4/TIME2_mux0000<3>7 (s4/TIME2_mux0000<3>7)
+     LUT2_D:I0->LO         1   0.704   0.104  s4/finish11 (N101)
+     LUT4:I3->O            4   0.704   0.587  s4/TIME3_and0001 (s4/TIME3_and0001)
+     FDCE:CE                   0.555          s4/TIME3_0
+    ----------------------------------------
+    Total                      6.053ns (3.258ns logic, 2.795ns route)
+                                       (53.8% logic, 46.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SET_W'
+  Clock period: 2.731ns (frequency: 366.166MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               2.731ns (Levels of Logic = 1)
+  Source:            s6/COUNT_W_0 (FF)
+  Destination:       s6/COUNT_W_0 (FF)
+  Source Clock:      SET_W rising
+  Destination Clock: SET_W rising
+
+  Data Path: s6/COUNT_W_0 to s6/COUNT_W_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.591   0.708  s6/COUNT_W_0 (s6/COUNT_W_0)
+     INV:I->O              1   0.704   0.420  s6/WATER2<0>1_INV_0 (WATER2<0>)
+     FDC:D                     0.308          s6/COUNT_W_0
+    ----------------------------------------
+    Total                      2.731ns (1.603ns logic, 1.128ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SET_M'
+  Clock period: 3.125ns (frequency: 320.000MHz)
+  Total number of paths / destination ports: 7 / 3
+-------------------------------------------------------------------------
+Delay:               3.125ns (Levels of Logic = 1)
+  Source:            s6/MODE_0 (FF)
+  Destination:       s6/MODE_0 (FF)
+  Source Clock:      SET_M rising
+  Destination Clock: SET_M rising
+
+  Data Path: s6/MODE_0 to s6/MODE_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            20   0.591   1.102  s6/MODE_0 (s6/MODE_0)
+     INV:I->O              1   0.704   0.420  s6/Mcount_MODE_xor<0>11_INV_0 (s6/Mcount_MODE)
+     FDCE:D                    0.308          s6/MODE_0
+    ----------------------------------------
+    Total                      3.125ns (1.603ns logic, 1.522ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 's1/CLK_250'
+  Clock period: 5.037ns (frequency: 198.531MHz)
+  Total number of paths / destination ports: 108 / 16
+-------------------------------------------------------------------------
+Delay:               5.037ns (Levels of Logic = 2)
+  Source:            s2/q_ctl_0 (FF)
+  Destination:       s2/q_count_3 (FF)
+  Source Clock:      s1/CLK_250 rising
+  Destination Clock: s1/CLK_250 rising
+
+  Data Path: s2/q_ctl_0 to s2/q_count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              9   0.591   0.995  s2/q_ctl_0 (s2/q_ctl_0)
+     LUT4:I0->O            5   0.704   0.712  s2/q_count_or00001 (s2/q_count_or0000)
+     LUT4:I1->O            1   0.704   0.420  s2/q_count_mux0000<3>4 (s2/q_count_mux0000<3>4)
+     FDS:S                     0.911          s2/q_count_3
+    ----------------------------------------
+    Total                      5.037ns (2.910ns logic, 2.127ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SET_M'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.954ns (Levels of Logic = 2)
+  Source:            POWER (PAD)
+  Destination:       s6/SET (FF)
+  Destination Clock: SET_M rising
+
+  Data Path: POWER to s6/SET
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.218   1.057  POWER_IBUF (POWER_IBUF)
+     LUT4:I0->O            1   0.704   0.420  s6/SET_and00001 (s6/SET_and0000)
+     FDCE:CE                   0.555          s6/SET
+    ----------------------------------------
+    Total                      3.954ns (2.477ns logic, 1.477ns route)
+                                       (62.6% logic, 37.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SET_M'
+  Total number of paths / destination ports: 8 / 3
+-------------------------------------------------------------------------
+Offset:              7.467ns (Levels of Logic = 3)
+  Source:            s6/MODE_0 (FF)
+  Destination:       LED_3 (PAD)
+  Source Clock:      SET_M rising
+
+  Data Path: s6/MODE_0 to LED_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            20   0.591   1.277  s6/MODE_0 (s6/MODE_0)
+     LUT4:I0->O            1   0.704   0.499  s5/LED_323 (s5/LED_323)
+     LUT2:I1->O            1   0.704   0.420  s5/LED_324 (LED_3_OBUF)
+     OBUF:I->O                 3.272          LED_3_OBUF (LED_3)
+    ----------------------------------------
+    Total                      7.467ns (5.271ns logic, 2.196ns route)
+                                       (70.6% logic, 29.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 's1/CLK_11'
+  Total number of paths / destination ports: 31 / 7
+-------------------------------------------------------------------------
+Offset:              8.655ns (Levels of Logic = 4)
+  Source:            s7/CLOSE (FF)
+  Destination:       LED_3 (PAD)
+  Source Clock:      s1/CLK_11 rising
+
+  Data Path: s7/CLOSE to LED_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.591   1.057  s7/CLOSE (s7/CLOSE)
+     LUT2:I0->O            6   0.704   0.704  s3/SR1 (SR)
+     LUT4:I2->O            1   0.704   0.499  s5/LED_323 (s5/LED_323)
+     LUT2:I1->O            1   0.704   0.420  s5/LED_324 (LED_3_OBUF)
+     OBUF:I->O                 3.272          LED_3_OBUF (LED_3)
+    ----------------------------------------
+    Total                      8.655ns (5.975ns logic, 2.680ns route)
+                                       (69.0% logic, 31.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              8.118ns (Levels of Logic = 4)
+  Source:            s1/CLK_1 (FF)
+  Destination:       LED_1 (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: s1/CLK_1 to LED_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.591   0.844  s1/CLK_1 (s1/CLK_11)
+     LUT3:I0->O            1   0.704   0.424  s5/LED_132_SW0_SW0 (N78)
+     LUT4:I3->O            1   0.704   0.455  s5/LED_132_SW0 (N56)
+     LUT4:I2->O            1   0.704   0.420  s5/LED_132 (LED_1_OBUF)
+     OBUF:I->O                 3.272          LED_1_OBUF (LED_1)
+    ----------------------------------------
+    Total                      8.118ns (5.975ns logic, 2.143ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'STOP'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              8.615ns (Levels of Logic = 4)
+  Source:            s3/SP (FF)
+  Destination:       LED_1 (PAD)
+  Source Clock:      STOP rising
+
+  Data Path: s3/SP to LED_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             32   0.591   1.341  s3/SP (s3/SP)
+     LUT3:I1->O            1   0.704   0.424  s5/LED_132_SW0_SW0 (N78)
+     LUT4:I3->O            1   0.704   0.455  s5/LED_132_SW0 (N56)
+     LUT4:I2->O            1   0.704   0.420  s5/LED_132 (LED_1_OBUF)
+     OBUF:I->O                 3.272          LED_1_OBUF (LED_1)
+    ----------------------------------------
+    Total                      8.615ns (5.975ns logic, 2.640ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 's1/CLK_250'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              5.870ns (Levels of Logic = 2)
+  Source:            s2/q_count_0 (FF)
+  Destination:       q_out<7> (PAD)
+  Source Clock:      s1/CLK_250 rising
+
+  Data Path: s2/q_count_0 to q_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              7   0.591   0.883  s2/q_count_0 (s2/q_count_0)
+     LUT4:I0->O            1   0.704   0.420  s2/t/Mrom_q_out21 (q_out_2_OBUF)
+     OBUF:I->O                 3.272          q_out_2_OBUF (q_out<2>)
+    ----------------------------------------
+    Total                      5.870ns (4.567ns logic, 1.303ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 10 / 7
+-------------------------------------------------------------------------
+Delay:               9.186ns (Levels of Logic = 5)
+  Source:            POWER (PAD)
+  Destination:       LED_3 (PAD)
+
+  Data Path: POWER to LED_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.218   0.961  POWER_IBUF (POWER_IBUF)
+     LUT2:I1->O            6   0.704   0.704  s3/SR1 (SR)
+     LUT4:I2->O            1   0.704   0.499  s5/LED_323 (s5/LED_323)
+     LUT2:I1->O            1   0.704   0.420  s5/LED_324 (LED_3_OBUF)
+     OBUF:I->O                 3.272          LED_3_OBUF (LED_3)
+    ----------------------------------------
+    Total                      9.186ns (6.602ns logic, 2.584ns route)
+                                       (71.9% logic, 28.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.02 secs
+ 
+--> 
+
+Total memory usage is 247492 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

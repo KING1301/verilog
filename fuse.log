@@ -1,0 +1,28 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/ML/Desktop/WASHER - fubeng test/WASH/washer_tb_isim_beh.exe -prj C:/Users/ML/Desktop/WASHER - fubeng test/WASH/washer_tb_beh.prj work.washer_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/ML/Desktop/WASHER - fubeng test/WASH/WASHER.v" into library work
+Analyzing Verilog file "C:/Users/ML/Desktop/WASHER - fubeng test/WASH/washer_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Divider
+Compiling module Divider_LED
+Compiling module Decoding
+Compiling module dtsm
+Compiling module CONTROL
+Compiling module COUNT
+Compiling module LED
+Compiling module M_WCHOOSE
+Compiling module AUTO_CLOSE
+Compiling module WASHER
+Compiling module washer_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 12 Verilog Units
+Built simulation executable C:/Users/ML/Desktop/WASHER - fubeng test/WASH/washer_tb_isim_beh.exe
+Fuse Memory Usage: 27580 KB
+Fuse CPU Usage: 624 ms

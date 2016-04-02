@@ -1,0 +1,32 @@
+# input
+NET "SET_W" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "CLK" LOC = B8;     #50MHZ时钟
+NET "POWER" LOC = P11;  #电源键 开关
+NET "STOP" LOC = A7;    #启动/暂停键 脉冲
+NET "SET_M" LOC = M4;  #模式选择键 脉冲
+NET "SET_W" LOC = C11;  #水位选择键 脉冲
+
+# output
+NET "q_ctl[3]" LOC = F12;
+NET "q_ctl[2]" LOC = J12;
+NET "q_ctl[1]" LOC = M13;
+NET "q_ctl[0]" LOC = K14;
+
+NET "q_out[7]" LOC = L14;
+NET "q_out[6]" LOC = H12;
+NET "q_out[5]" LOC = N14;
+NET "q_out[4]" LOC = N11;
+NET "q_out[3]" LOC = P12;
+NET "q_out[2]" LOC = L13;
+NET "q_out[1]" LOC = M12;
+NET "q_out[0]" LOC = N13;
+
+
+NET "LED_P" LOC = M5;    #电源灯
+NET "LED_ST" LOC = M11;  #启动/暂停灯
+NET "LED_1" LOC = P7 ;   #洗涤灯
+NET "LED_2" LOC = P6;    #漂洗灯
+NET "LED_3" LOC = N5;    #脱水灯
+NET "LED_in" LOC = N4;   #进水灯
+NET "LED_out" LOC = P4;  #出水灯
+NET "LED_A" LOC = G1;    #蜂鸣报警灯
